@@ -1,17 +1,15 @@
 from nomad.config.models.plugins import SchemaPackageEntryPoint
-from pydantic import Field
 
 
-class NewSchemaPackageEntryPoint(SchemaPackageEntryPoint):
-    parameter: int = Field(0, description='Custom configuration parameter')
-
+class SolarPackageEntryPoint(SchemaPackageEntryPoint):
+    
     def load(self):
         from solar_repo_perolab.schema_packages.schema_package import m_package
 
         return m_package
 
 
-schema_package_entry_point = NewSchemaPackageEntryPoint(
-    name='NewSchemaPackage',
-    description='New schema package entry point configuration.',
+solar_package_entry_point = SolarPackageEntryPoint(
+    name='Solar Repository Package',
+    description='package containing plot and other helper functions for Photovoltaics Characterization.',
 )
