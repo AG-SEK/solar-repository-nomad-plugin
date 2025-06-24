@@ -112,7 +112,7 @@ where = ["src"]
 
 [project.entry-points.'nomad.plugin']
 
-schema_package_entry_point = "solar_repo_perolab.schema_packages:schema_package_entry_point"
+schema_package_entry_point = "solar_repo_perolab.schema_packages:solar_package_entry_point"
 
 
 
